@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Conversion</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#">Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link text-light" href="page1.html">Scientific</a>
+            <a class="nav-item nav-link text-light active" href="page2.html">Conversion  <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link text-light" href="page3.html">Mensuration </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Second Navigation for conversion -->
+      <div class="topnav">
+          <a href="#" id="a-1" onclick="showDivContent('.data','.temp','.length','.weight','.time')">Data</a>
+          <a href="#" id="a-2" onclick="showDivContent('.temp','.length','.weight','.time','.data')">Temperature</a>
+          <a href="#" id="a-3" onclick="showDivContent('.length','.weight','.time','.data','.temp')">Length</a>
+          <a href="#" id="a-4" onclick="showDivContent('.weight','.time','.data','.temp','.length')">Weight</a>
+          <a href="#" id="a-5" onclick="showDivContent('.time','.data','.temp','.length','.weight')">Time</a>
+      </div>
+        <!-- Data  -->
+     <div class="data">
+        <h1 style="text-align: center;">Data Section</h1>
+
+        <table>
+          <!-- 1st table row -->
+          <tr>
+            <td>
+                <select class="form-control opt1" id="exampleFormControlSelect1">
+                  <option value="B">Byte B</option>
+                  <option value="KB">Kilobyte KB</option>
+                  <option value="MB">Megabyte MB</option>
+                  <option value="GB">Gigabyte GB</option>
+                  <option value="TB">Terabyte TB</option>
+                </select>
+            </td>
+
+            <td>
+              <input type="number" class="form-control-1" id="exampleFormControlInput1" placeholder="00.00">
+            </td>
+          </tr>
+          <!-- 2nd table row -->
+          <tr>
+            <td>
+                <select class="form-control opt2" id="exampleFormControlSelect1">
+                  <option value="B">Byte B</option>
+                  <option value="KB">Kilobyte KB</option>
+                  <option value="MB">Megabyte MB</option>
+                  <option value="GB">Gigabyte GB</option>
+                  <option value="TB">Terabyte TB</option>
+                </select>
+            </td>
+
+            <td>
+              <p class="ans-data"></p>
+            </td>
+          </tr>
+        </table>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="calcData()">Answer</button>
+
+     </div>
+
+     <!-- Temperature -->
+     <div class="temp">
+        <h1 style="text-align: center;">Temperature</h1>
+        <table>
+          <!-- 1st table row -->
+          <tr>
+            <td>
+                <select class="form-control opt3" id="exampleFormControlSelect1">
+                  <option value="C">Celsius</option>
+                  <option value="F">Fahrenheit</option>
+                  <option value="K">Kelvin</option>
+                </select>
+            </td>
+
+            <td>
+              <input type="number" class="form-control-2" id="exampleFormControlInput1" placeholder="00.00">
+            </td>
+          </tr>
+          <!-- 2nd table row -->
+          <tr>
+            <td>
+              <select class="form-control opt4" id="exampleFormControlSelect1">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+              </select>
+            </td>
+
+            <td>
+              <p class="ans-data-2"></p>
+            </td>
+          </tr>
+        </table>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="calcTemperature()">Answer</button>
+
+        <!-- Length -->
+     </div>
+
+     <!-- Length -->
+     <div class="length">
+        <h1 style="text-align: center;">Length</h1>
+
+        <table>
+          <!-- 1st table row -->
+          <tr>
+            <td>
+                <select class="form-control opt5" id="exampleFormControlSelect1">
+                  <option value="M">Meter</option>
+                  <option value="K">Kilometer</option>
+                  <option value="Ms">Miles</option>
+                </select>
+            </td>
+
+            <td>
+              <input type="number" class="form-control-3" id="exampleFormControlInput1" placeholder="00.00">
+            </td>
+          </tr>
+          <!-- 2nd table row -->
+          <tr>
+            <td>
+              <select class="form-control opt6" id="exampleFormControlSelect1">
+                <option value="M">Meter</option>
+                <option value="K">Kilometer</option>
+                <option value="Ms">Miles</option>
+              </select>
+            </td>
+
+            <td>
+              <p class="ans-data-3"></p>
+            </td>
+          </tr>
+        </table>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="calcLength()">Answer</button>
+
+     </div>
+
+     <!-- Weight -->
+     <div class="weight">
+        <h1 style="text-align: center;">Weight</h1>
+
+        <table>
+          <!-- 1st table row -->
+          <tr>
+            <td>
+                <select class="form-control opt7" id="exampleFormControlSelect1">
+                  <option value="K">Kilogram</option>
+                  <option value="G">Gram</option>
+                  <option value="Q">Quintal</option>
+                  <option value="P">Pound</option>
+                  <option value="O">Ounce</option>
+                </select>
+            </td>
+
+            <td>
+              <input type="number" class="form-control-4" id="exampleFormControlInput1" placeholder="00.00">
+            </td>
+          </tr>
+          <!-- 2nd table row -->
+          <tr>
+            <td>
+              <select class="form-control opt8" id="exampleFormControlSelect1">
+                  <option value="K">Kilogram</option>
+                  <option value="G">Gram</option>
+                  <option value="Q">Quintal</option>
+                  <option value="P">Pound</option>
+                  <option value="O">Ounce</option>
+              </select>
+            </td>
+
+            <td>
+              <p class="ans-data-4"></p>
+            </td>
+          </tr>
+        </table>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="calcWeight()">Answer</button>
+
+        <!-- Number -->
+     </div>
+
+     <!-- Time -->
+     <div class="time">
+        <h1 style="text-align: center;">Time</h1>
+        <table>
+          <!-- 1st table row -->
+          <tr>
+            <td>
+                <select class="form-control opt9" id="exampleFormControlSelect1">
+                  <option value="Y">Year</option>
+                  <option value="M">Month</option>
+                  <option value="D">Day</option>
+                  <option value="H">Hour</option>
+                  <option value="Mi">Minute</option>
+                  <option value="S">Second</option>
+                </select>
+            </td>
+
+            <td>
+              <input type="number" class="form-control-5" id="exampleFormControlInput1" placeholder="00.00">
+            </td>
+          </tr>
+          <!-- 2nd table row -->
+          <tr>
+            <td>
+              <select class="form-control opt10" id="exampleFormControlSelect1">
+                <option value="Y">Year</option>
+                <option value="M">Month</option>
+                <option value="D">Day</option>
+                <option value="H">Hour</option>
+                <option value="Mi">Minute</option>
+                <option value="S">Second</option>
+              </select>
+            </td>
+
+            <td>
+              <p class="ans-data-5"></p>
+            </td>
+          </tr>
+        </table>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="calcTime()">Answer</button>
+
+     </div>
+
+
+     <script>
+      //  showing the div tags
+       function showDivContent(c1,c2,c3,c4,c5){
+           document.querySelector(c1).style.visibility = "visible"
+           document.querySelector(c2).style.visibility = "hidden"
+           document.querySelector(c3).style.visibility = "hidden"
+           document.querySelector(c4).style.visibility = "hidden"
+           document.querySelector(c5).style.visibility = "hidden"
+       }
+     </script>
+      <script src="page2.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

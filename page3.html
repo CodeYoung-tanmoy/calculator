@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+    <title>Mensuration</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#">Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link text-light" href="page1.html">Scientific</a>
+            <a class="nav-item nav-link text-light" href="page2.html">Conversion </a>
+            <a class="nav-item nav-link text-light active" href="page3.html">Mensuration  <span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+      </nav>
+
+       <!-- Second Navigation for conversion -->
+       <div class="topnav">
+        <a href="#" id="a-1" onclick="showDivContent('.square','.circle','.triangle','.cube','.cuboid','.cylinder','.sphere','.cone')">Sq & Rect</a>
+        <a href="#" id="a-2" onclick="showDivContent('.circle','.triangle','.cube','.cuboid','.cylinder','.sphere','.cone','.square')">Circle</a>
+        <a href="#" id="a-3" onclick="showDivContent('.triangle','.cube','.cuboid','.cylinder','.sphere','.cone','.square','.circle')">Triangle</a>
+        <a href="#" id="a-4" onclick="showDivContent('.cube','.cuboid','.cylinder','.sphere','.cone','.square','.circle','.triangle')">Cube</a>
+        <a href="#" id="a-5" onclick="showDivContent('.cuboid','.cylinder','.sphere','.cone','.square','.circle','.triangle','.cube')">Cuboid</a>
+        <a href="#" id="a-6" onclick="showDivContent('.cylinder','.sphere','.cone','.square','.circle','.triangle','.cube','.cuboid')">Cylinder</a>
+        <a href="#" id="a-7" onclick="showDivContent('.sphere','.cone','.square','.circle','.triangle','.cube','.cuboid','.cylinder')">Sphere</a>
+        <a href="#" id="a-8" onclick="showDivContent('.cone','.square','.circle','.triangle','.cube','.cuboid','.cylinder','.sphere')">Cone</a>
+    </div>
+
+    <!-- Containers for the conversion -->
+    <!-- Square -->
+    <div class="square">
+      <h1>Sq and Rect</h1>
+
+      <!-- Inputs -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Length</span>
+        <input type="number" class="form-size form-control-1-1" placeholder="Enter Length" aria-label="Username" aria-describedby="basic-addon1">
+        &emsp13; <span class="input-group-text" id="basic-addon1">Breadth</span>
+        <input type="number" class="form-size form-control-1-2" placeholder="Enter Breadth" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <!-- Result -->
+      <div class="ans-1"></div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="calcSquare()" type="button">Answer</button>
+      </div>
+
+    <!-- Circle -->
+    <div class="circle">
+      <h1>Circle</h1>
+
+       <!-- Inputs -->
+       <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Radii</span>
+        <input type="number" class="form-size form-control-2-1" placeholder="Enter Radii" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <!-- Result -->
+      <div class="ans-2"></div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="calcCircle()" type="button">Answer</button>
+      </div>
+
+    <!-- Triangle -->
+    <div class="triangle">
+      <h1>Triangle</h1>
+
+      <!-- Inputs -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Side-1</span>
+        <input type="number" class="form-size form-control-3-1" placeholder="Side-1" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">Side-2</span>
+        <input type="number" class="form-size form-control-3-2" placeholder="Side-2" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">Side-3</span>
+        <input type="number" class="form-size form-control-3-3" placeholder="Side-3" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <!-- Result -->
+      <div class="ans-3"></div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="calcTriangle()" type="button">Answer</button>
+      </div>
+
+    <!-- Cube -->
+    <div class="cube">
+      <h1>Cube</h1>
+
+      <!-- Inputs -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Side</span>
+        <input type="number" class="form-size form-control-4-1" placeholder="Enter Side Length" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <!-- Result -->
+      <div class="ans-4"></div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="calcCube()" type="button">Answer</button>
+    </div>
+
+    <!-- Cuboid -->
+    <div class="cuboid">
+      <h1>Cuboid</h1>
+
+       <!-- Inputs -->
+       <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Length</span>
+        <input type="number" class="form-size form-control-5-1" placeholder="Enter Length" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">Breadth</span>
+        <input type="number" class="form-size form-control-5-2" placeholder="Enter Breadth" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">Height</span>
+        <input type="number" class="form-size form-control-5-3" placeholder="Enter Height" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <!-- Result -->
+      <div class="ans-5"></div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="calcCuboid()" type="button">Answer</button>
+    </div>
+
+    <!-- Cylinder -->
+    <div class="cylinder">
+      <h1>Cylinder</h1>
+
+       <!-- Inputs -->
+       <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Height</span>
+        <input type="number" class="form-size form-control-6-1" placeholder="Enter Height" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">Radii</span>
+        <input type="number" class="form-size form-control-6-2" placeholder="Enter Radii" aria-label="Username" aria-describedby="basic-addon1">
+     </div>
+
+      <!-- Result -->
+      <div class="ans-6"></div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="calcCylinder()" type="button">Answer</button>
+    </div>
+
+    <!-- Sphere -->
+    <div class="sphere">
+      <h1>Sphere</h1>
+
+      <!-- Inputs -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Radii</span>
+        <input type="number" class="form-size form-control-7-1" placeholder="Enter Radii" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <!-- Result -->
+      <div class="ans-7"></div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="calcSphere()" type="button">Answer</button>
+    </div>
+
+    <!-- Cone -->
+    <div class="cone">
+      <h1>Cone</h1>
+
+      <!-- Inputs -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Height</span>
+        <input type="number" class="form-size form-control-8-1" placeholder="Enter Height" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">Radii</span>
+        <input type="number" class="form-size form-control-8-2" placeholder="Enter Radii" aria-label="Username" aria-describedby="basic-addon1">
+     </div>
+
+      <!-- Result -->
+      <div class="ans-8"></div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="calcCone()" type="button">Answer</button>
+    </div>
+<script>
+    function showDivContent(c1,c2,c3,c4,c5,c6,c7,c8){
+      document.querySelector(c1).style.visibility = "visible"
+      document.querySelector(c2).style.visibility = "hidden"
+      document.querySelector(c3).style.visibility = "hidden"
+      document.querySelector(c4).style.visibility = "hidden"
+      document.querySelector(c5).style.visibility = "hidden"
+      document.querySelector(c6).style.visibility = "hidden"
+      document.querySelector(c7).style.visibility = "hidden"
+      document.querySelector(c8).style.visibility = "hidden"
+  }
+</script>
+    <script src="page3.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
