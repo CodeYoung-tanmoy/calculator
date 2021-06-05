@@ -101,4 +101,9 @@
                 visibility: hidden;
             }
         }
+    @media screen and (max-width: 600px){
+            .form-control-1, .form-control-2, .form-control-3, .form-control-4, .form-control-5{
+                width: 100px;
+            }
+        }
         /* Media query end */
