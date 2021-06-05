@@ -1,3 +1,6 @@
+body{
+    margin-bottom: 50px;
+}
 /* Beginning os second navigation */
 .topnav a{
     font-size: 23px;
@@ -59,7 +62,7 @@
         /* Beginning of Content */
 
             .square, .circle, .triangle, .cube, .cuboid, .cylinder, .sphere, .cone {
-                height: 600px;
+                height: 500px;
                 width: 65%;
                 border: 2px solid black;
                 position: absolute;
@@ -103,7 +106,7 @@
 
         @media screen and (max-width: 600px){
             .square, .circle, .triangle, .cube, .cuboid, .cylinder, .sphere, .cone {
-                height: 450px;
+                height: 600px;
                 width: 65%;
                 border: 2px solid black;
                 position: absolute;
@@ -117,7 +120,10 @@
 
         @media screen and (max-width: 600px){
             .form-size{
-                width: 150px;
+                width: 100px;
+            }
+            h1{
+                font-size: 30px;
             }
         }
         /* Media query end */
