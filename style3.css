@@ -106,7 +106,7 @@ body{
 
         @media screen and (max-width: 600px){
             .square, .circle, .triangle, .cube, .cuboid, .cylinder, .sphere, .cone {
-                height: 600px;
+                height: 570px;
                 width: 65%;
                 border: 2px solid black;
                 position: absolute;
